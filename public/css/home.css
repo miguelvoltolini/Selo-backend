@@ -1,0 +1,324 @@
+header {
+    background-image: url("/img/Composição_site/teste_gif/gif.gif");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 95vh;
+    color: #fff;
+    padding: 1% 0;
+    margin: 0;
+    animation: alternarImagem 25s infinite;
+  } 
+
+  
+/*======================================================== CHAMADA CARDS ========*/
+.cards {
+  display: flex;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+}
+
+.imagem_cards {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.div_text_cards {
+  margin-left: 10px;
+}
+
+h1 {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  color: #5A5A5A;
+}
+
+p {
+  margin: 0;
+  font-size: 1.1rem;
+  font-family: "Montserrat", Sans-serif;
+  color: #acabab;
+}
+/*======================================================== CHAMADA CARDS ========*/
+
+.botao-imagem {
+display: flex;
+justify-content: space-between;
+}
+
+.hover-darken {
+position: relative;
+overflow: hidden;
+}
+
+.image-container {
+position: relative;
+}
+
+.botao-imagem img {
+margin-left: 5%;
+width: 90%;
+border-radius: 15px;
+filter: saturate(0%); /*altera saturação */
+transition: filter 0.3s ease; /*coloca transição pro filtro*/
+}
+
+.botao-imagem .hover-darken:hover img {
+filter: saturate(100%);
+}
+
+.image-text {
+position: absolute;
+font-size: 1.7rem;
+font-weight: 500;
+transition: opacity 0.3s ease;
+color: white;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
+opacity: 0;
+}
+
+.image-text:hover{
+opacity: 1;
+}
+
+
+/*============================================== SLIDE HISTORIA =============*/
+#slidehis{
+  background-image: url("/img/Composição_site/skatecrt.psd");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 110vh;
+}
+#slidehis h1{
+ color: beige;
+ font-family: 'Segoe UI';
+ /* text-transform: uppercase; */
+ font-size: 50px;
+ margin-left: 108px;
+ font-weight: 500;
+}
+#slidehis h2{
+ color: white;
+ font-family: 'Segoe UI';
+ text-transform: uppercase;
+ margin-top: -28px;
+ margin-left: 105px;
+ font-size: 78px;
+ font-weight: 700;
+
+}
+
+#slidehis p{
+  color: white;
+  font-family: 'Segoe UI';
+  margin-left: 105px;
+  margin-top: 270px;
+  font-size: 20px;
+  font-weight: 350;
+  text-decoration: none;
+}
+
+#slidehis a{
+  text-decoration: none;
+}
+p#psli{
+  margin-top: 25px;
+  font-weight: 600;
+}
+/*=============================================== SLIDE HISTORIA =============*/
+
+
+/*======================================================== camisetas venda */
+.vendaprods {
+  display: flex;
+  justify-content: center;
+}
+
+#camiseta222 {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+#camiseta222 img {
+  max-width: 100%;
+  border: none;
+  border-radius: 3%;
+}
+
+#camiseta222 img:hover {
+  filter: brightness(95%); /*altera brilho */
+}
+
+#camiseta222 h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+#camiseta222 p {
+  font-size: 18px;
+  font-weight: 300;
+  margin-top: -1px;
+}
+
+
+#button_bolsa_compra {
+  position: fixed;
+  bottom: 20px; 
+  right: 20px; 
+  z-index: 999; /* Para garantir que o botão esteja sempre visível */
+  background-color: black;
+  color: white;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 50%;
+  /* width: 20px; */
+  font-size: 2.6rem;
+  cursor: pointer;
+  /* Outros estilos */
+}
+
+
+/*======================================================== camisetas venda */
+
+
+@media (max-width: 768px) {
+
+  html{
+      width: 100%;
+  }
+
+
+/*=========================== CARDS ====================*/
+.row {
+  flex-direction: column;
+  align-items: center;
+}
+
+.imagem_cards {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  padding: 10px;
+  text-align: center; 
+
+}
+
+.div_text_cards {
+ margin-top: 10px;  
+}
+
+h1{
+  font-size: 0.9rem;
+}
+p{
+  font-size: 0.9rem;
+}
+
+/*=========================== CARDS ====================*/
+
+/*=========================== BOTÃO IMAGENS ============*/
+.botao-imagem{
+  flex-direction: column;
+}
+
+.botao-imagem img{
+  margin: 5%;
+  margin-top: -3%;
+  width: 90%;
+  height: auto;
+  border-radius: 15px;
+}
+/*=========================== BOTÃO IMAGENS ============*/
+
+/*=========================== SLIDE ====================*/
+  #slidehis {
+      height: 60vh;
+  
+  }
+
+  #slidehis h1 {
+      color: beige;
+      font-family: 'Segoe UI';
+      font-size: 25px;
+      margin-right: 20px;
+      font-weight: 500;
+      text-align: end;
+      }
+
+  #slidehis h2 {
+      color: white;
+      font-family: 'Segoe UI';
+      text-transform: uppercase;
+      margin-top: -18px;
+      margin-right: 20px;
+      font-size: 45px;
+      font-weight: 700;
+      text-align: end;
+  }
+
+  #slidehis p {
+      color: white;
+      font-family: 'Segoe UI';    
+      margin-left: 20px;
+      margin-top: 100px;
+      font-size: 12px;
+      font-weight: 400;
+      text-decoration: none;
+  }
+
+  #slidehis a {
+      text-decoration: none;
+  }
+
+  p#psli {
+      margin-top: 25px;
+      font-weight: 600;
+  }
+/*=========================== SLIDE ====================*/
+/*=========================== CAMISAS VENDAS ====================*/
+
+  .vendaprods {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    #camiseta222 img{
+      border-radius: 13px;
+    }
+  
+    #camiseta222 {
+      width: calc(92%);
+      margin: 5%;
+      padding: 0;
+    }
+
+    #camiseta222 h2{
+      font-size: 80%;
+    }
+
+    #camiseta222 p{
+      font-size: 100%;
+    }
+
+/*=========================== CAMISAS VENDAS ====================*/
+
+}
+/*=============================================================  MIDIA QUARY  ======================*/
+
+/* #696969  COR ICN FOOTER  */
+/* #5A5A5A COR ICN CHAMADA  */

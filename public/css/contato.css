@@ -1,0 +1,88 @@
+
+/*=============================================== TIRE DÚVIDAS ====*/
+
+#tire_duvidas{
+    margin-left: 13%;
+    margin-top: 40px;
+    width: 40%;
+}
+
+h1#duv{
+    text-align: center;
+    margin-top: 15vh;
+}
+
+p#parag{
+    margin-top: 5vh;
+    text-align: center;
+    font-weight: 300;
+    color: #555555;
+}
+
+
+h1#h1nms{
+    font-size: 1rem;
+    margin-top: -6vh;
+    margin-left: 8vw;
+    color: #696969;
+    
+}
+h2#h2comp{
+    font-size: 1rem;
+    margin-left: 8vw;
+    font-weight: 300;
+    color: #555555;
+}
+#tire_duvidas2{
+    margin-left: 53%;
+    margin-top: -23.3%;
+    width: 40%;
+}
+
+input{
+    color: #C1C1C1;
+    border: #C1C1C1 1px solid;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    height: 40px;
+    width: 90%;
+    outline: none;
+    font-weight: 100;
+    text-indent: 15px; /* Ajuste o valor conforme necessário */
+}
+input::placeholder{
+    position: absolute;
+    color: #C1C1C1;
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+textarea#inp_grande {
+    resize: vertical;
+    color: #C1C1C1;
+    border: #C1C1C1 1px solid;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    height: 90px;
+    width: 90%;
+    outline: none;
+    font-weight: 100;
+    text-indent: 15px ; /* Ajuste o valor conforme necessário */
+  }
+
+  textarea#inp_grande::placeholder{
+    position: absolute;
+    margin-top: 10px;
+    color: #C1C1C1;
+    font-size: 1rem;
+    font-weight: 100;
+}
+button#btn_form{
+    background-color: black;
+    color: white;
+    height: 40px;
+    width: 90%;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}

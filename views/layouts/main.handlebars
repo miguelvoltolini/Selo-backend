@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />
+    <link rel="stylesheet" href="/css/header_footer.css">
+    <script src="/js/home.js" defer></script>
+    <title>Início</title>
+</head>
+<body>
+	{{#if adm}}
+    <header>
+		<div class="menu_geral">
+            <button class="btn-menu btn_btn"><span class="material-symbols-outlined">menu</span></button>
+			<a href="/home" class="logo"><img src="/img/Logos/Logo Branca (Fundo B TST3).png" alt=""></a>
+			<nav>
+				<ul class="menu_nav">
+					<li><a href="/sistema">Administrador</a></li>
+					<li><a href="/home">Home</a></li>
+					<li><a href="/quem_somos">Quem Somos</a></li>
+					<li><a href="/contato">Contato</a></li>
+					<li><a href="/login"><span class="material-symbols-outlined">account_circle</span></a></li>
+				</ul>
+			</nav>
+		</div>
+        <nav class="navbar navbar_ativo">
+            <ul class="lista">
+                <hr><br>
+                <li class="menu-itens"> <a href="/camisetas"><sup>Camisetas<sup></sup></a></li><br><hr><br>
+                <li class="menu-itens"> <a href="pagina2.html"><sup>Moletons<sup></sup></a></li><br><hr><br>
+                <li class="menu-itens"> <a href="pagina3.html"><sup>Meias<sup></sup></a></li><br><hr><br>
+                <li class="menu-itens"> <a href="pagina4.html"><sup>Acessórios <sup></sup></a></li><br><hr><br>
+                <li class="menu-itens"> <a href="pagina5.html"><sup>Bonés e Gorros <sup></sup></a></li><br><hr><br>
+                <li class="menu-itens"> <a href="pagina6.html"><sup>Bolsas e EcoBags <sup></sup></a></li><br><br>
+            </ul>
+        </nav>
+	</header>
+	{{else}}
+    <header>
+		<div class="menu_geral">
+            <button class="btn-menu btn_btn"><span class="material-symbols-outlined">menu</span></button>
+			<a href="/home" class="logo"><img src="/img/Logos/Logo Branca (Fundo B TST3).png" alt=""></a>
+			<nav>
+				<ul class="menu_nav">
+					<li><a href="/home">Home</a></li>
+					<li><a href="/quem_somos">Quem Somos</a></li>
+					<li><a href="/contato">Contato</a></li>
+					<li><a href="/login"><span class="material-symbols-outlined">account_circle</span></a></li>
+				</ul>
+			</nav>
+		</div>
+        <nav class="navbar navbar_ativo">
+            <ul class="lista">
+                <hr><br>
+                <li class="menu-itens"> <a href="/camisetas"><sup>Camisetas<sup></sup></a></li><br><hr><br>
+                <li class="menu-itens"> <a href="pagina2.html"><sup>Moletons<sup></sup></a></li><br><hr><br>
+                <li class="menu-itens"> <a href="pagina3.html"><sup>Meias<sup></sup></a></li><br><hr><br>
+                <li class="menu-itens"> <a href="pagina4.html"><sup>Acessórios <sup></sup></a></li><br><hr><br>
+                <li class="menu-itens"> <a href="pagina5.html"><sup>Bonés e Gorros <sup></sup></a></li><br><hr><br>
+                <li class="menu-itens"> <a href="pagina6.html"><sup>Bolsas e EcoBags <sup></sup></a></li><br><br>
+            </ul>
+        </nav>
+	</header>
+	{{/if}}
+	
+    <main>
+        {{{body}}}
+    </main>
+    <footer>
+        <div class="rodape">
+			<br><br>
+			<img id="logordp" src="/img/Logos/Logo Cinza (Fundo B Tam Med 2).png" alt="Logo">
+			<hr id="hrrdp"> <p id="plogo">Reform <br> <h1 id="h1logo">Your</h1> <br> <h2 id="h2logo">Style.</h2></p>
+			<img id="icntelef" src="/img/icones/footer/001-chamada-telefnica.png" alt="">
+			<h1 id="h1telef">Telefone</h1><h2 id="h2telef">+55 (48)9 9853-0078</h2>
+			<img id="icnwpp" src="/img/icones/footer/002-whatsapp.png" alt="">
+			<h1 id="h1wpp">WhatsApp</h1><h2 id="h2wpp">+55 (48)9 9853-0078</h2>
+			<img id="icnemail" src="/img/icones/footer/003-o-email.png" alt="">
+			<h1 id="h1email">E-mail</h1><h2 id="h2email">selostore.vp@gmail.com</h2>
+
+			<img id="icninsta" src="/img/icones/footer/001-instagram.png" alt="">
+			<img id="icnfb" src="/img/icones/footer/002-facebook.png" alt="">
+			<img id="icnyt" src="/img/icones/footer/003-youtube.png" alt="">
+	
+			<h1 id="h1icns">Siga nossas redes!</h1><h2 id="h2icns">Siga a Selo e fique por dentro das últimas <br> novidades!</h2>
+
+			<div class="links">
+				<p id="plink">Links</p></a><br>
+				<a id="plki" href="home.html">Home</a><br>
+				<a id="plkh" href="historia.html">Quem Somos</a><br>
+				<a id="plkc" href="contato.html">Contato</a>
+			</div>
+			
+			<p id="pfinalrp"> <h1 id="h1pfin"> 2023 Selo</h1><h2 id="h2pfin">| Todos os direitos reservados.</h2></p>
+			<div id="pdireitos"> Ícones feitos por <a id="adir" href="https://www.flaticon.com/br/autores/kliwir-art" title="kliwir art"> kliwir art </a> from <a id="flaticon" href="https://www.flaticon.com/br/" title="Flaticon">www.flaticon.com'</a></div>
+		</div>
+    </footer>
+</body>
+</html>

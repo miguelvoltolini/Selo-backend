@@ -1,0 +1,621 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	font-family: "Montserrat", Sans-serif;
+	margin: 0;
+}
+
+
+.menu_geral {
+	/* max-width: 960px; */
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: "Montserrat", Sans-serif;
+    font-weight: 00;
+    text-transform: uppercase;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar{
+    /* padding-top: 8vh; */
+    list-style: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    height: 500px;
+    width: 270px;
+    background-color: white;
+    transition: 200ms;
+    cursor: pointer;
+}
+
+.navbar_ativo{
+    left: -200vw;
+    transition: 200ms;
+    
+  }
+  
+  .btn-menu{
+      margin-right: 8vw;
+      background-color: transparent;
+      color: white;
+      border: solid 1px transparent;
+      margin-left: 2%;
+      align-items: center;
+      cursor: pointer;
+    
+  }
+  .btn-menu:hover{
+      color: rgb(95, 189, 95);
+      
+  }
+/* @keyframes alternarImagem {
+    0% {
+      background-image: url("/img/Composição_site/teste_gif/gif_completa.gif");
+    }
+    25% {
+      background-image: url("/img/Composição_site/ias.jpg");
+    }
+    50% {
+      background-image: url("/img/Composição_site/img_ceu.jpg");
+    }
+    75% {
+      background-image: url("/img/Composição_site/ias.jpg");
+    }
+    100% {
+      background-image: url("/img/Composição_site/img_ceu.jpg");
+    }
+  } */
+  
+
+  header {
+    background-color: black;
+    color: #fff;
+    padding: 1% 0;
+    margin: 0;
+    animation: alternarImagem 25s infinite;
+  }
+
+.logo {
+  position: relative;
+	margin-left: -33vw;
+}
+
+
+ul.lista {
+    display: block;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+ul.lista a{
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+ul.menu_nav{
+    margin-top: 6%;
+}
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+nav li {
+	margin: 0 20px;
+}
+
+nav a {
+	color: white;
+	text-decoration: none;
+	font-size: 18px;
+}
+
+nav a:hover {
+	color: rgb(167, 248, 167);
+    text-decoration-thickness: 0.1px;
+}
+
+sup{
+    color: #5A5A5A;
+}
+sup:hover{
+    color: rgb(95, 189, 95);
+    text-decoration: underline;
+    font-weight: 500;
+    text-decoration-color: rgb(95, 189, 95);;
+    text-decoration-thickness: 0.1px;
+}
+
+.slide img{
+	margin: 0;
+    width: 100%;
+    height: auto;
+}
+
+h1 {
+	font-size: 36px;
+}
+
+p {
+	font-size: 18px;
+	line-height: 1.5;
+}
+
+
+/*======================================================== rodape */
+
+footer {
+    background-color: #eae9e9;
+	color: #fff;
+	padding: 13% 0;
+}
+
+img#logordp{
+    position: absolute;
+    margin-left: 7vw;
+    margin-top: -26vh;
+    height: 25vh;
+}
+
+hr#hrrdp{
+    position: absolute;
+    margin-left: 19.4vw;
+    margin-top: -21vh;
+    opacity: 100%;
+    height: 120px;
+    width: 1.8px;
+    background-color: rgba(128, 128, 128, 0.81) ;
+    border: none;
+}
+
+p#plogo{
+    color: #696969;
+    position: absolute;
+    margin-left: 20.3vw;
+    margin-top: -17.5vh;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+h1#h1logo{
+    position: absolute;
+    margin-left: 20.3vw;
+    margin-top: -15vh;
+    font-size: 1.7rem;
+    color: #696969;
+    font-weight: 700;
+    font-family: "Montserrat", Sans-serif;
+    text-transform: uppercase;
+}
+h2#h2logo{
+    position: absolute;
+    margin-left: 20.3vw;
+    margin-top: -13.9vh;
+    color: #696969;
+    font-weight: 300;
+    font-family: "Montserrat", Sans-serif;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+img#icntelef{
+    position: absolute;
+    margin-left: 9.8vw;
+    margin-top: 5.5vh;
+    height: 7.5vh;
+}
+h1#h1telef{
+    position: absolute;
+    margin-left: 15.3vw;
+    margin-top: 7vh;
+    font-size: 1.2rem;
+    color: #696969;
+    font-weight: 600;
+    font-family: "Montserrat", Sans-serif;
+}
+h2#h2telef{
+    position: absolute;
+    margin-left: 15.3vw;
+    margin-top: 10.8vh;
+    font-size: 0.9rem;
+    color: #696969;
+    font-family: "Montserrat", Sans-serif;
+}
+
+img#icnwpp{
+    position: absolute;
+    height: 7.5vh;
+    margin-top: 5.5vh;
+    margin-left: 40vw;
+}
+h1#h1wpp{
+    position: absolute;
+    margin-left: 45vw;
+    margin-top: 7vh;
+    font-size: 1.2rem;
+    color: #696969;
+    font-weight: 600;
+    font-family: "Montserrat", Sans-serif;
+}
+h2#h2wpp{
+    position: absolute;
+    margin-left: 45vw;
+    margin-top: 10.8vh;
+    font-size: 0.9rem;
+    color: #696969;
+    font-family: "Montserrat", Sans-serif;
+}
+
+img#icnemail{
+    position: absolute;
+    height: 8.5vh;
+    margin-top: 5.5vh;
+    margin-left: 70vw;
+}
+h1#h1email{
+    position: absolute;
+    margin-left: 75.5vw;
+    margin-top: 6.7vh;
+    font-size: 1.2rem;
+    color:#696969;
+    font-weight: 600;
+    font-family: "Montserrat", Sans-serif;
+}
+h2#h2email{
+    position: absolute;
+    margin-left: 75.5vw;
+    margin-top: 10.4vh;
+    font-size: 0.9rem;
+    color: #696969;
+    font-family: "Montserrat", Sans-serif;
+}
+
+img#icninsta{
+  position: absolute;
+  height: 7.2vh;
+  margin-top: -6vh;
+  margin-left: 70vw;
+  transition: transform 0.5s ease;
+}
+img#icninsta:hover{
+  opacity: 85%;
+  cursor: pointer;
+  transform: translateY(-13px);
+}
+img#icnfb{
+  position: absolute;
+  height: 7.2vh;
+  margin-top: -6vh;
+  margin-left: 74vw;
+  transition: transform 0.5s ease;
+}
+img#icnfb:hover{
+  opacity: 85%;
+  cursor: pointer;
+  transform: translateY(-13px);
+}
+img#icnyt{
+  position: absolute;
+  height: 7.2vh;
+  margin-top: -6vh;
+  margin-left: 78vw;
+  transition: transform 0.5s ease;
+}
+img#icnyt:hover{
+  opacity: 85%;
+  cursor: pointer;
+  transform: translateY(-13px);
+}
+
+h1#h1icns{
+    position: absolute;
+    margin-left: 70.5vw;
+    margin-top: -24vh;
+    font-size: 1.3rem;
+    color:#696969;
+    font-weight: 600;
+    font-family: "Montserrat", Sans-serif;
+}
+h2#h2icns{
+    position: absolute;
+    margin-left: 70.5vw;
+    margin-top: -17vh;
+    font-size: 1rem;
+    color: #696969;
+    font-weight: 300;
+    font-family: "Montserrat", Sans-serif;
+}
+p#plink{
+    position: absolute;
+    margin-top: -24vh;
+    margin-left: 40vw;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #696969;
+    font-family: "Montserrat", Sans-serif;
+}
+
+a#plki{
+    position: absolute;
+    margin-top: -20vh;
+    margin-left: 40vw;
+    text-decoration: none;
+    color: #696969;
+    font-family: "Montserrat", Sans-serif;
+}
+a#plkh{
+    position: absolute;
+    margin-top: -19vh;
+    margin-left: 40vw;
+    text-decoration: none;
+    color: #696969;
+    font-family: "Montserrat", Sans-serif;
+}
+a#plkc{
+    position: absolute;
+    margin-top: -18vh;
+    margin-left: 40vw;
+    text-decoration: none;
+    color: #696969;
+    font-family: "Montserrat", Sans-serif;
+}
+
+h1#h1pfin{
+    font-family: "Montserrat", Sans-serif;
+    position: absolute;
+    margin-left: 37vw;
+    margin-top: 20vh;
+    font-size: 1rem;
+    color: #696969;
+}
+h2#h2pfin{
+    font-family: "Montserrat", Sans-serif;
+    position: absolute;
+    margin-left: 42.5vw;
+    margin-top: 20vh;
+    font-size: 1rem;
+    color: #919090;
+}
+
+div#pdireitos{
+    font-family: "Montserrat", Sans-serif;
+    position: absolute;
+    margin-left: 39vw;
+    margin-top: 23vh;
+    font-size: 0.7rem;
+    color: #696969;
+}
+#adir{
+color: black;
+}
+#flaticon{
+    color: black;
+}
+
+/*======================================================== rodape */
+hr{
+    opacity: 20%;
+}
+
+@media (max-width: 768px) {
+
+    html{
+        width: 100%;
+    }
+/*=========================== MENU ====================*/
+
+header {
+	background-color: transparent;
+	color: #fff;
+	padding: 1% 0;
+	margin: 0;
+}
+    .menu_geral {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar {
+        position: static;
+        height: auto;
+        background-color: transparent;
+        display: none;
+    }
+
+    .navbar_ativo {
+        display: block;
+        left: 0;
+        height: 75%;
+        width: auto;
+        background-color: rgb(255, 255, 255);
+    }
+
+    .btn-menu {
+        display: block;
+        margin-right: 0;
+        margin-top: 3%;
+        margin-bottom: 10px;
+    }
+
+    ul.menu_nav {
+        display: none;
+    }
+
+    .logo {
+        margin-top: -3%;
+        margin-left: 5%;
+        
+    }
+/*=========================== MENU ====================*/
+
+/*=========================== RODAPE ====================*/
+footer {
+    padding: 127% 0;
+  }
+
+  img#logordp {
+    margin-left: 15%;
+    margin-top: -130%;
+    height: 20vh;
+  }
+
+  hr#hrrdp {
+    margin-left: 53.3%;
+    margin-top: -124%;
+    height: 90px;
+  }
+  p#plogo {
+    margin-left: 59%;
+    margin-top: -121%;
+  }
+
+  h1#h1logo {
+    margin-left: 59%;
+    margin-top: -116.5%;
+    font-size: 1.4rem;
+  }
+
+  h2#h2logo {
+    margin-left: 59.2%;
+    margin-top: -115%;
+    font-size: 1rem;
+  }
+
+  h1#h1icns {
+    padding: 0;
+    margin-left: 23%;
+    margin-top: -50vh;
+    text-align: center;
+    font-size: 1.3rem;
+  }
+
+  h2#h2icns {
+    padding: 0;
+    margin-left: 5%;
+    margin-top: -44vh;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  img#icntelef {
+    margin-left: 40%;
+    margin-top: -17vh;
+    height: 10vh;
+  }
+
+  h1#h1telef {
+    margin-left: 41vw;
+    margin-top: -5vh;
+    font-size: 1.1rem;
+  }
+
+  h2#h2telef {
+    margin-left: 30vw;
+    margin-top: -1vh;
+    font-size: 0.9rem;
+  }
+
+  img#icnwpp {
+    margin-left: 40%;
+    margin-top: 8vh;
+    height: 10vh;
+  }
+
+  h1#h1wpp {
+    margin-left: 38vw;
+    margin-top: 22vh;
+    font-size: 1.1rem;
+  }
+
+  h2#h2wpp {
+    margin-left: 30vw;
+    margin-top: 26vh;
+    font-size: 0.9rem;
+  }
+
+  img#icnemail {
+    margin-left: 40%;
+    margin-top: 34vh;
+    height: 10vh;
+  }
+
+  h1#h1email {
+    margin-left: 41.3vw;
+    margin-top: 46vh;
+    font-size: 1.1rem;
+  }
+
+  h2#h2email {
+    margin-left: 26vw;
+    margin-top: 50vh;
+    font-size: 0.9rem;
+  }
+
+  img#icninsta {
+    height: 8vh;
+    margin-top: -32vh;
+    margin-left: 23%;
+  }
+
+  img#icnfb {
+    height: 8vh;
+    margin-top: -32vh;
+    margin-left: 43%;
+  }
+
+  img#icnyt {
+    height: 8vh;
+    margin-top: -32vh;
+    margin-left: 63%;
+  }
+
+  p#plink {
+    display: none;
+  }
+
+  a#plki {
+    display: none;
+  }
+
+  a#plkh {
+    display: none;
+  }
+
+  a#plkc {
+    display: none;
+  }
+
+  h1#h1pfin {
+    margin-left: 15vw;
+    margin-top: 60vh;
+    font-size: 0.8rem;
+  }
+
+  h2#h2pfin {
+    margin-left: 32.5vw;
+    margin-top: 60vh;
+    font-size: 0.8rem;
+  }
+
+  div#pdireitos {
+    margin-left: 19vw;
+    margin-top: 63vh;
+    font-size: 0.6rem;
+  }
+/*=========================== RODAPE ====================*/
+
+}
+/*=============================================================  MIDIA QUARY  ======================*/
+
+/* #696969  COR ICN FOOTER  */
+/* #5A5A5A COR ICN CHAMADA  */

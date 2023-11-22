@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="/css/login.css">
+
+{{#if log}}
+    <main>
+        <h1>Efetuar Login</h1>
+
+        <form action="/login" method="post">
+        <input type="email" name="email" placeholder="Digite seu email"><br>
+        <input type="password" name="senha" placeholder="Digite sua senha"><br>
+        <br>
+        <button type="submit">Entrar</button>
+        </form>
+    </main>
+{{else}}
+    <main>
+        <h1>Informações da conta</h1>
+    </main>
+{{/if}}
+
+
+{{#if adm}}
+    <main>
+        <h1>Informações da conta</h1>
+    </main>
+    
+{{else}}
+    <main>
+        <h1>Bem vindo, {{nomeAdm}}</h1>
+    </main>
+{{/if}}
