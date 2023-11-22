@@ -2,6 +2,8 @@ const express = require('express')
 const app = express()
 const exphbs = require('express-handlebars')
 const conn = require('./db/conn')
+const Usuario = require('./models/Usuario')
+const Produto = require('./models/Produto')
 
 //======= models
 
@@ -10,7 +12,8 @@ const hostname = 'localhost'
 let log = false
 let adm = false
 let nomeAdm = ''
-tipoUsuario = ''
+let tipoUsuario = ''
+let idUsuario = Number
 
 //========================================= config express
 app.use(express.urlencoded({extended:true}))
@@ -31,32 +34,29 @@ app.post('/login', async (req,res)=>{
         res.render('login', {log, msg})
     }else{
         // comparando a senha com o uso de hash
-        bcrypt.compare(senha, pesq.senha, (err,resultado)=>{
+        bcrypt.compare(senha, pesq.senha, (err,compativel)=>{
             if(err){
                 console.error('Erro ao comparar a senha',err)
-                res.render('login', {log})
-            }else if(resultado){
+                msg = 'Erro, por favor tente novamente'
+                res.render('login', {log, msg})
+            }else if(compativel){
                 if(pesq.tipo === 'adm'){
                     log = true
-                    id_usuario = pesq.id
-                    usuario = pesq.nome_usuario
-                    tipoUsuario = pesq.tipo
                     adm = true
-                    res.render('adm', {log, id_usuario, usuario, tipoUsuario, adm})        
+                    nomeAdm = pesq.nome
+                    idUsuario = pesq.id
+                    tipoUsuario = pesq.tipo
+                    res.render('adm', {log, nomeAdm, tipoUsuario, adm, idUsuario})        
                 }else if(pesq.tipo === 'cliente'){
                     log = true
-                    id_usuario = pesq.id
-                    usuario = pesq.nome_usuario
+                    idUsuario = pesq.id
                     tipoUsuario = pesq.tipo
-                    res.render('home', {log, id_usuario, usuario, tipoUsuario, adm})
+                    res.render('home', {log, tipoUsuario, adm, idUsuario})
                 }else{
-                    id_usuario = pesq.id
-                    usuario = pesq.nome_usuario
-                    console.log(pesq.nome_usuario)
-                    res.render('home', {log, id_usuario, usuario, tipoUsuario, adm})
+                    idUsuario = pesq.id
+                    res.render('home', {log, tipoUsuario, adm, idUsuario})
                 }
             }else{
-                console.log('senha incorreta')
                 msg = 'Senha incorreta'
                 res.render('login', {log, msg})
             }
@@ -67,7 +67,7 @@ app.get('/login', (req,res)=>{
     log = false
     id_usuario = Number
     usuario = ''
-    res.render('login', {log, id_usuario, usuario, tipoUsuario, adm})
+    res.render('login', {log, id_usuario, usuario, adm})
 })
 
 

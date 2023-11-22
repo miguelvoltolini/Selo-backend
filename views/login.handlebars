@@ -1,6 +1,16 @@
 <link rel="stylesheet" href="/css/login.css">
 
 {{#if log}}
+    {{#if adm}}
+        <main>
+        <h1>Bem vindo, {{nomeAdm}}</h1>
+    </main>
+    {{else}}
+    <main>
+        <h1>Informações da conta</h1>
+    </main>
+    {{/if}}
+{{else}}
     <main>
         <h1>Efetuar Login</h1>
 
@@ -11,20 +21,32 @@
         <button type="submit">Entrar</button>
         </form>
     </main>
-{{else}}
     <main>
-        <h1>Informações da conta</h1>
+        <h1>Ainda não está logado? Cadastre-se:</h1>
+
+        <form action="/cadastrar_usuario" method="post">
+        <label for="nome">Digite seu Nome</label>
+        <input type="text" name="nome" placeholder="Digite seu Nome"><br>
+        <br>
+        <label for="sobrenome">Digite seu Sobrenome</label>
+        <input type="text" name="sobrenome" placeholder="Digite seu Sobrenome"><br>
+        <br>
+        <label for="cpf">Digite seu cpf</label>
+        <input type="text" name="cpf" placeholder="Digite seu cpf"><br>
+        <br>
+        <label for="telefone">Digite seu telefone</label>
+        <input type="text" name="telefone" placeholder="Digite seu telefone"><br>
+        <br>
+        <label for="email">Digite seu email</label>
+        <input type="email" name="email" placeholder="Digite seu email"><br>
+        <br>
+        <label for="senha">Digite sua senha</label>
+        <input type="password" name="senha" placeholder="Digite sua senha"><br>
+        <br>
+
+        <button type="submit">Cadastrar</button>
+        </form>
     </main>
 {{/if}}
 
 
-{{#if adm}}
-    <main>
-        <h1>Informações da conta</h1>
-    </main>
-    
-{{else}}
-    <main>
-        <h1>Bem vindo, {{nomeAdm}}</h1>
-    </main>
-{{/if}}
