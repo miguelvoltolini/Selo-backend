@@ -1,0 +1,80 @@
+main {
+    text-align: center;
+    margin-top: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+thead {
+    background-color: #f2f2f2;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+form {
+    width: 50%;
+    margin: 20px auto;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.sistema_nav nav a {
+    display: block;
+    margin-bottom: 10px;
+    margin-left: 150px;
+    color: #333;
+    text-decoration: none;
+    border: 1px solid #000; /* Adiciona uma borda preta fina */
+    padding: 8px; /* Espaçamento interno */
+    background-color: transparent; /* Fundo transparente */
+    width: 80.3%; /* Largura total */
+    box-sizing: border-box; /* Evita que as bordas adicionem à largura total */
+    transition: background-color 0.3s, border-color 0.3s; /* Transição suave */
+}
+
+.sistema_nav nav a:hover {
+    color: #fff;
+    background-color: #333; /* Preenche com a cor de fundo ao passar o mouse */
+    border-color: #555; /* Cor da borda ao passar o mouse */
+}
+

@@ -1,0 +1,61 @@
+h1{
+    margin-top: 4vh;
+    text-align: center;
+}
+
+form {
+    max-width: 100%;
+    margin: 20px;
+    text-align: left;
+    margin-left: 150px;
+    margin-right: 150px;
+    
+}
+
+.config-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.config-section {
+    flex: 1;
+    margin-right: 20px; /* Adicionado para dar um espaçamento entre as seções */
+}
+
+form h3 {
+    text-align: center;
+    color: #333;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+
+button#att {
+    background-color: transparent;
+    color: #333;
+    padding: 8px;
+    border: 1px solid #000;
+    width: 50%;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    display: block; /* Adicionado para ocupar a largura total disponível */
+    margin: 20px auto; /* Adicionando margem para centralizar */
+}
+
+button#att:hover {
+    color: #fff;
+    background-color: #333;
+    border-color: #555;
+}

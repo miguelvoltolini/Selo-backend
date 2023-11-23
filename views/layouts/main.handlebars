@@ -10,13 +10,14 @@
     <title>Início</title>
 </head>
 <body>
-	{{!-- {{#if adm}} --}}
+	{{#if adm}}
     <header>
 		<div class="menu_geral">
             <button class="btn-menu btn_btn"><span class="material-symbols-outlined">menu</span></button>
 			<a href="/home" class="logo"><img src="/img/Logos/Logo Branca (Fundo B TST3).png" alt=""></a>
 			<nav>
 				<ul class="menu_nav">
+					<li><a href="/logout">Sair</a></li>
 					<li><a href="/sistema">Administrador</a></li>
 					<li><a href="/home">Home</a></li>
 					<li><a href="/quem_somos">Quem Somos</a></li>
@@ -37,7 +38,7 @@
             </ul>
         </nav>
 	</header>
-	{{!-- {{else}} --}}
+	{{else}}
     <header>
 		<div class="menu_geral">
             <button class="btn-menu btn_btn"><span class="material-symbols-outlined">menu</span></button>
@@ -63,11 +64,22 @@
             </ul>
         </nav>
 	</header>
-	{{!-- {{/if}} --}}
+	{{/if}}
 	
     <main>
         {{{body}}}
     </main>
+
+	{{!-- teste --}}
+
+
+
+	<button id="carrinhoBtn" onclick="mostrarCarrinho()">
+	<span class="material-symbols-outlined" id="button_bolsa_compra">shopping_bag</span>
+	<span id="contadorItens" class="contador">0</span>
+	</button>
+
+	{{!-- teste --}}
     <footer>
         <div class="rodape">
 			<br><br>

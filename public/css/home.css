@@ -192,6 +192,22 @@ p#psli{
   /* Outros estilos */
 }
 
+#adicionarAoCarrinho {
+  position: relative;
+  background-color: black;
+  color: white;
+  padding: 14px;
+  margin-top: -100px;
+  margin-left: 260px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#adicionarAoCarrinho:hover {
+  background-color: rgb(52, 52, 52);
+}
+
 
 /*======================================================== camisetas venda */
 

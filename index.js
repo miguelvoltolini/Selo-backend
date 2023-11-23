@@ -25,6 +25,26 @@ app.engine('handlebars', exphbs.engine())
 app.set('view engine', 'handlebars')
 //=========================================
 
+
+
+//========================================= carrinho
+
+
+app.get('/carrinho', (req,res)=>{
+    res.render('carrinho', {log, idUsuario, nomeAdm, adm})
+})
+
+//=========================================atualizar produto
+app.get('/atualizar_produto', (req,res)=>{
+    res.render('atualizar_produto', {log, adm})
+})
+
+//=========================================listar usuario
+app.get('/login', async (req,res)=>{
+    const pesq = await Usuario.findAll({raw:true})
+    res.render('login', {log, adm, valores:pesq})
+})
+
 //=========================================listar produto
 
 app.get('/listar_produto', async (req,res)=>{
@@ -176,6 +196,12 @@ app.get('/login', (req,res)=>{
 
 
 //========================================= Home
+
+app.get('/logout', (req,res)=>{
+    adm = false
+    log = false
+    res.render('login', {log, adm, nomeAdm})
+})
 
 app.get('/sistema', (req,res)=>{
     res.render('sistema', {log, adm, nomeAdm})

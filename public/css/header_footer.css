@@ -1,5 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+
+/* teste */
+
+
+#contadorItens {
+  position: fixed;
+  bottom: 67px;
+  right: 20px;
+  background-color: rgb(95, 189, 95);
+  color: white;
+  padding: 8px;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  z-index: 2; /* Agora o z-index é maior que o do botão */
+}
+
+.carrinhoBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+  z-index: 1; /* Z-index menor que o do contador */
+}
+
+#carrinhoBtn:hover {
+  color: #3498db;
+}
+
+#button_bolsa_compra {
+  position: fixed;
+  bottom: 20px; 
+  right: 20px; 
+  z-index: 999; /* Para garantir que o botão esteja sempre visível */
+  background-color: black;
+  color: white;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 50%;
+  /* width: 20px; */
+  font-size: 2.6rem;
+  cursor: pointer;
+  /* Outros estilos */
+}
+
+
+/* teste */
+
+
+
 *{
     margin: 0;
     padding: 0;

@@ -8,6 +8,31 @@
     {{else}}
     <main>
         <h1>Informações da conta</h1>
+        <table>
+    <thead>
+        <th>Seu nome</th>
+        <th>Seu sobrenome</th>
+        <th>Seu cpf</th>
+        <th>Seu telefone</th>
+        <th>Seu E-mail</th>
+    </thead>
+    <tbody>
+        {{#each valores}}
+        <tr>
+            <td>{{this.nome}}</td>
+            <td>{{this.sobrenome}}</td>
+            <td>{{this.cpf}}</td>
+            <td>{{this.telefone}}</td>
+            <td>{{this.email}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+     <div class="sistema_nav">
+            <nav>
+                <a href="/logout">Sair da conta</a>
+            </nav>
+        </div>
     </main>
     {{/if}}
 {{else}}

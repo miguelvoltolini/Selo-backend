@@ -1,36 +1,44 @@
-main.sistema-content {
+h1{
+    margin-top: 5vh;
     text-align: center;
-    margin-top: 20px;
 }
 
-main.sistema-content h1 {
-    color: #333;
-}
-
-.sistema_nav {
+form {
     width: 50%;
     margin: 20px auto;
     text-align: left;
 }
 
-.sistema_nav h4 {
-    text-align: left; /* Alinha o texto "Produtos" à esquerda */
+form h1 {
+    text-align: center;
+    color: #333;
 }
 
-.sistema_nav nav a {
+form label {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     color: #333;
-    text-decoration: none;
-    border: 1px solid #000; /* Adiciona uma borda preta fina */
+}
+
+form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+form button {
+    background-color: transparent;
+    color: #333;
     padding: 8px; /* Espaçamento interno */
-    background-color: transparent; /* Fundo transparente */
+    border: 1px solid #000; /* Adiciona uma borda preta fina */
     width: 100%; /* Largura total */
     box-sizing: border-box; /* Evita que as bordas adicionem à largura total */
+    cursor: pointer;
     transition: background-color 0.3s, border-color 0.3s; /* Transição suave */
 }
 
-.sistema_nav nav a:hover {
+form button:hover {
     color: #fff;
     background-color: #333; /* Preenche com a cor de fundo ao passar o mouse */
     border-color: #555; /* Cor da borda ao passar o mouse */
