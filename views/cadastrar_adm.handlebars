@@ -2,6 +2,7 @@
 
 
 <h1>Cadastrar um Administrador</h1>
+<br>
 
 <form action="/cadastrar_adm" method="post">
     <label for="nome">Digite seu Nome</label>
@@ -22,6 +23,8 @@
     <label for="senha">Digite sua senha</label>
     <input type="password" name="senha" placeholder="Digite sua senha"><br>
     <br>
-
     <button type="submit">Cadastrar</button>
+    {{#if msg}}
+    <p>{{msg}}</p>
+    {{/if}}
     </form>

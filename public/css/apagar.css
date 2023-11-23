@@ -45,7 +45,7 @@ input {
     box-sizing: border-box;
 }
 
-button.log {
+button#apg {
     background-color: #333;
     color: #fff;
     padding: 10px 20px;
@@ -54,7 +54,7 @@ button.log {
     cursor: pointer;
 }
 
-button.log:hover {
+button#apg:hover {
     background-color: #555;
 }
 

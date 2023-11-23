@@ -43,7 +43,7 @@
         <input type="email" name="email" placeholder="Digite seu email"><br>
         <input type="password" name="senha" placeholder="Digite sua senha"><br>
         <br>
-        <button type="submit">Entrar</button>
+        <button class="log" type="submit">Entrar</button>
         </form>
     </main>
     <main>
@@ -69,7 +69,12 @@
         <input type="password" name="senha" placeholder="Digite sua senha"><br>
         <br>
 
-        <button type="submit">Cadastrar</button>
+        <button class="log" type="submit">Cadastrar</button>
+        {{#if msg}}
+            <p>{{msg}}</p>
+        {{else}}
+            <p>{{msg2}}</p>
+        {{/if}}
         </form>
     </main>
 {{/if}}

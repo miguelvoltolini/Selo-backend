@@ -17,21 +17,6 @@
   z-index: 2; /* Agora o z-index é maior que o do botão */
 }
 
-.carrinhoBtn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  font-size: 24px;
-  cursor: pointer;
-  background: none;
-  border: none;
-  outline: none;
-  z-index: 1; /* Z-index menor que o do contador */
-}
-
-#carrinhoBtn:hover {
-  color: #3498db;
-}
 
 #button_bolsa_compra {
   position: fixed;

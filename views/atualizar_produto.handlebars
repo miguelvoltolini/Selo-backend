@@ -1,14 +1,12 @@
 <link rel="stylesheet" href="/css/atualizar.css">
-
+<br>
 <h1>Atualizar Produto</h1>
-
+<br><br>
     <form action="/atualizar_produto" method="post">
         <div class="config-container">
             <div class="config-section">
                 <h3>Configurações Atuais do Produto</h3>
                 <br>
-                {{!-- <label for="id">Insira o Id do Produto que você deseja atualizar</label> --}}
-                <input type="text" name="id" placeholder="Insira o Id do Produto"><br>
                 {{!-- <label for="nome_produto">Insira o nome do Produto que você deseja atualizar</label> --}}
                 <input type="text" name="nome_produto" placeholder="Insira o nome do Produto"><br>
                 {{!-- <label for="cod_produto">Insira o código do Produto que você deseja atualizar</label> --}}
@@ -25,8 +23,6 @@
             <div class="config-section">
                 <h3>Novas configurações do Produto</h3>
                 <br>
-                {{!-- <label for="novo_id">Insira o novo Id do Produto que você deseja atualizar</label> --}}
-                <input type="text" name="novo_id" placeholder="Insira o novo Id do Produto"><br>
                 {{!-- <label for="novo_nome_produto">Insira o novo nome do Produto que você deseja atualizar</label> --}}
                 <input type="text" name="novo_nome_produto" placeholder="Insira o novo nome do Produto"><br>
                 {{!-- <label for="novo_cod_produto">Insira o novo código do Produto que você deseja atualizar</label> --}}
@@ -41,12 +37,14 @@
                 <input type="text" name="novo_preco" placeholder="Insira o novo preço do Produto"><br>
             </div>
         </div>
+        {{#if msg}}
+            <p>{{msg}}</p>
+        {{else}}
+            <p>{{msg2}}</p>
+        {{/if}}
 
         <button id="att" type="submit">Atualizar</button>
     </form>
 
-    {{#if msg}}
-        <p>{{msg}}</p>
-    {{/if}}
 
 

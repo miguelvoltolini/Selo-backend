@@ -34,9 +34,76 @@ app.get('/carrinho', (req,res)=>{
     res.render('carrinho', {log, idUsuario, nomeAdm, adm})
 })
 
+//=========================================apagar produto
+
+app.post('/apagar_produto', async (req,res)=>{
+    const nome_produto = req.body.nome_produto
+    const cod_produto = req.body.cod_produto
+    const qtde_estoque = req.body.qtde_estoque
+    const cor = req.body.cor
+    const tamanho = req.body.tamanho
+    const preco = req.body.preco
+
+    const pesq = await Produto.findOne({raw:true, where:{ nome_produto:nome_produto, cod_produto:cod_produto, qtde_estoque:qtde_estoque, cor:cor, tamanho:tamanho, preco:preco}})
+
+    let msg = 'Dados não encontrados'
+    let msg2 = 'Produto Apagado!'
+    log = true
+
+    if(pesq==null){
+        res.render('apagar_produto', {log, adm, nomeAdm, msg})
+    }else{
+        await Produto.destroy({where:{nome_produto:pesq.nome_produto, cod_produto:pesq.cod_produto, qtde_estoque:pesq.qtde_estoque, cor:pesq.cor, tamanho:pesq.tamanho, preco:pesq.preco}})
+        res.render('apagar_produto', {log, adm, nomeAdm, msg2})
+    }
+})
+
+app.get('/apagar_produto', (req,res)=>{
+    res.render('apagar_produto', {log, adm, nomeAdm})
+})
 //=========================================atualizar produto
+app.post('/atualizar_produto', async (req,res)=>{
+    //config atuais
+    const nome_produto = req.body.nome_produto
+    const cod_produto = req.body.cod_produto
+    const qtde_estoque = req.body.qtde_estoque
+    const cor = req.body.cor
+    const tamanho = req.body.tamanho
+    const preco = req.body.preco
+    //novas config
+    const novo_id = req.body.novo_id
+    const novo_nome_produto = req.body.novo_nome_produto
+    const novo_cod_produto = req.body.novo_cod_produto
+    const novo_qtde_estoque = req.body.novo_qtde_estoque
+    const novo_cor = req.body.novo_cor
+    const novo_tamanho = req.body.novo_tamanho
+    const novo_preco = req.body.novo_preco
+
+    const pesq = await Produto.findOne({raw:true, where:{ nome_produto:nome_produto, cod_produto:cod_produto, qtde_estoque:qtde_estoque, cor:cor, tamanho:tamanho, preco:preco}})
+
+    const dados = {
+        nome_produto: novo_nome_produto,
+        cod_produto: novo_cod_produto,
+        qtde_estoque: novo_qtde_estoque,
+        cor: novo_cor,
+        tamanho: novo_tamanho,
+        preco: novo_preco,
+    }
+
+    let msg = 'Dados não encontrados'
+    let msg2 = 'Produto Atualizado!'
+    log = true
+
+    if(pesq==null){
+        res.render('atualizar_produto', {log, adm, nomeAdm, msg})
+    }else{
+        await Produto.update(dados, {where:{nome_produto:pesq.nome_produto, cod_produto:pesq.cod_produto, qtde_estoque:pesq.qtde_estoque, cor:pesq.cor, tamanho:pesq.tamanho, preco:pesq.preco}})
+        res.render('atualizar_produto', {log, adm, nomeAdm, msg2})
+    }
+})
+
 app.get('/atualizar_produto', (req,res)=>{
-    res.render('atualizar_produto', {log, adm})
+    res.render('atualizar_produto', {log, adm, nomeAdm})
 })
 
 //=========================================listar usuario
