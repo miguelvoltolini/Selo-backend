@@ -299,6 +299,9 @@ app.get('/login', (req,res)=>{
 
 
 //========================================= Home
+app.get('/cadastrar_usuario', (req,res)=>{
+    res.render('cadastrar_usuario', {log, adm, nomeAdm})
+})
 
 app.get('/logout', (req,res)=>{
     adm = false
