@@ -1,0 +1,69 @@
+/* carrinho.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#carrinho-container {
+  width: 390px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#itens-carrinho-container {
+  text-align: left;
+}
+
+#itens-carrinho {
+  list-style-type: none;
+  padding: 0;
+}
+
+.item {
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.btns {
+  text-align: center;
+  margin-top: 20px;
+}
+
+  div.btns button{
+    margin-left: 10px;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  div.btns button:hover {
+    background-color: #45a049;
+  }
+  
+
+.total {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#mensagem-compra {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+}

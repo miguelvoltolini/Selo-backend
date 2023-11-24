@@ -192,7 +192,7 @@ p#psli{
   /* Outros estilos */
 }
 
-#adicionarAoCarrinho {
+#adicionar_carrinho {
   position: relative;
   background-color: black;
   color: white;
@@ -205,7 +205,7 @@ p#psli{
   border-radius: 50%;
   cursor: pointer;
 }
-#adicionarAoCarrinho:hover {
+#adicionar_carrinho:hover {
   background-color: rgb(52, 52, 52);
 }
 

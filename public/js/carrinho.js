@@ -17,20 +17,13 @@ carrinho.forEach((item) => {
 const total = carrinho.reduce((total, item) => total + item.preco, 0)
 const qtde_item = carrinho.reduce((total_item, item)=> total_item + item.qtde, 0)
 qtde_total.textContent = qtde_item
-total_carrinho.textContent = total.toFixed(2)
+total_carrinho.textContent = total
 
-// Atualize o ícone do carrinho na página principal
-const carrinho_icone = document.getElementById("carrinho-icon")
-carrinho_icone.src = "/img/carrinho_cheio.png"
 
 // Adicione um ouvinte de evento de clique ao botão "Limpar Carrinho"
 limpar_carrinho_botao.addEventListener("click", () => {
     // Limpe os itens do carrinho no Local Storage
     localStorage.removeItem("carrinho")
-
-    // atualiza o icone do carrinho
-    const carrinho_icone = document.getElementById("carrinho-icon")
-    carrinho_icone.src = "/img/carrinho_vazio.png"
 
     // Limpe a lista de itens no carrinho e o total na página
     itens_carrinho.innerHTML = ""

@@ -26,6 +26,41 @@ app.set('view engine', 'handlebars')
 //=========================================
 
 
+// ================== Produtos à venda =======================
+
+app.post('/comprar', async (req, res) => {
+    try {
+        const dadosCarrinho = req.body;
+        console.log('Dados do carrinho:', dadosCarrinho);
+
+        const atualizacoesPromises = [];
+
+        for (const item of dadosCarrinho) {
+            const produto = await Produto.findByPk(item.cod_produto);
+
+            if (!produto || produto.qtde_estoque < item.qtde) {
+                return res.status(400).json({
+                    message: `Produto insuficiente ou não disponível. Estoque atual: ${produto ? produto.qtde_estoque : 0}`,
+                });
+            }
+
+            const atualizacaoPromessa = Produto.update(
+                { qtde_estoque: produto.qtde_estoque - item.qtde },
+                { where: { id: item.cod_produto } }
+            );
+
+            atualizacoesPromises.push(atualizacaoPromessa);
+        }
+
+        await Promise.all(atualizacoesPromises);
+
+        res.status(200).json({ message: 'Compra realizada com sucesso!' });
+    } catch (error) {
+        console.error('Erro ao processar a compra:', error);
+        res.status(500).json({ message: 'Erro ao processar a compra' });
+    }
+});
+
 
 //========================================= carrinho
 
