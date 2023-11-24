@@ -199,11 +199,12 @@ p#psli{
   padding: 14px;
   margin-top: -100px;
   margin-left: 260px;
+  height: 3.7rem;
+  width: 3.7rem;
   border: none;
   border-radius: 50%;
   cursor: pointer;
 }
-
 #adicionarAoCarrinho:hover {
   background-color: rgb(52, 52, 52);
 }

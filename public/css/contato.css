@@ -3,7 +3,12 @@
 
 #tire_duvidas{
     margin-left: 100px;
-    margin-top: 40px;
+    margin-top: -50px;
+    width: 40%;
+}
+#tire_duvidas2{
+    margin-left: 53%;
+    margin-top: -72.5vh;
     width: 40%;
 }
 
@@ -29,14 +34,9 @@ h1#h1nms{
 }
 h2#h2comp{
     font-size: 1rem;
-    margin-left: 8vw;
+    margin-left: 3vw;
     font-weight: 300;
     color: #555555;
-}
-#tire_duvidas2{
-    margin-left: 53%;
-    margin-top: -78.5vh;
-    width: 40%;
 }
 
 

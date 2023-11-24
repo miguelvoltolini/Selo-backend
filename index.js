@@ -107,9 +107,10 @@ app.get('/atualizar_produto', (req,res)=>{
 })
 
 //=========================================listar usuario
-app.get('/login', async (req,res)=>{
-    const pesq = await Usuario.findAll({raw:true})
-    res.render('login', {log, adm, valores:pesq})
+app.get('/login', async (req, res)=>{
+    const pesq = await Usuario.findByPk(idUsuario, {raw:true})
+    console.log(pesq)
+    res.render('login', {log, valores:pesq, tipoUsuario, adm})
 })
 
 //=========================================listar produto
